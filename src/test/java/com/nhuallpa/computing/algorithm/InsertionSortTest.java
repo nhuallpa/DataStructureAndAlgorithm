@@ -1,6 +1,9 @@
 package com.nhuallpa.computing.algorithm;
 
+import com.nhuallpa.computing.domain.Employee;
 import org.junit.jupiter.api.Test;
+
+import java.util.function.Function;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -48,6 +51,51 @@ class InsertionSortTest {
         InsertionSort.sort(A);
 
         assertArrayEquals(expected, A);
+    }
+
+    @Test
+    void sortEmployee() {
+
+        Employee[] employees = new Employee[] {
+                new Employee(99, "Carlos", "Rojas", "mail@gmail.com"),
+                new Employee(30, "Kevin", "Rojas", "mail@gmail.com"),
+                new Employee(53, "Hilda", "Rojas", "mail@gmail.com")
+        };
+
+        Employee[] expected = new Employee[] {
+                new Employee(30, "Kevin", "Rojas", "mail@gmail.com"),
+                new Employee(53, "Hilda", "Rojas", "mail@gmail.com"),
+                new Employee(99, "Carlos", "Rojas", "mail@gmail.com")
+        };
+
+
+
+        InsertionSort.sort(employees);
+
+        assertArrayEquals(expected, employees);
+
+    }
+
+
+    @Test
+    void sortEmployeeWithGenerics() {
+
+        Employee[] employees = new Employee[] {
+                new Employee(99, "Carlos", "Rojas", "mail@gmail.com"),
+                new Employee(30, "Kevin", "Rojas", "mail@gmail.com"),
+                new Employee(53, "Hilda", "Rojas", "mail@gmail.com")
+        };
+
+        Employee[] expected = new Employee[] {
+                new Employee(30, "Kevin", "Rojas", "mail@gmail.com"),
+                new Employee(53, "Hilda", "Rojas", "mail@gmail.com"),
+                new Employee(99, "Carlos", "Rojas", "mail@gmail.com")
+        };
+
+        InsertionSort.sort(employees, Employee::getEmployeeNumber);
+
+        assertArrayEquals(expected, employees);
+
     }
 
 

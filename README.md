@@ -95,3 +95,58 @@ Delete(item) = O(n)
 3. Write an algorithm that takes two strings and returns a boolean value indicating if the strings are anagrams. If you don't know what an anagram is, search for the word (not the algorithm) online. What is the time complexity of this algorithm?
 
 ---
+
+
+## Linked List
+Is a ordered set of data elements such that each element contains a link to its succesor
+The las element of the sequence points to a null element.
+This elements are called Nodes
+The link list itself contains a reference to the firts elemtn of the list, which is called a head element.
+
+### Node
+it containt two part,
+- Data
+- nextNode
+
+### Implementing
+
+The function insertAtHead(data) is O(1) because it doesn't depend on the size of elements.
+
+The function deleteAtStart is O(1)
+
+The function search(Data) is O(N)
+
+### Sorted LinkedList
+
+Insert (Integer Data) : O(N) the worst case time complexity. 
+
+It has to travel all elements of the linked list and we have to add the new at the end of the list.
+
+### Double Linked Node
+
+
+### Stack (LIFO)
+Is a Abstract Data Type.
+
+Operation:
+- Push: Insert an element on to the stack at the top of the stack. Time complexity is  O(1)
+- Pop: Remove the topmost elements of the stack and return it. Time complexity is O(1)
+- Peek: Read the value of topmost element in the stack without removing it. Time complexity is O(1).
+
+
+### Queues (FIFO)
+Is a Abstract Data Type
+
+Operation:
+- Enqueue: Inserts an element in the queue from the tail towards the head.
+- Dequeue: Remove an element in the queue from the head of the queue.
+- Peek: Returns the value of the element at the head without removing it.
+
+
+### Merge Sort
+
+```
+
+```
+
+Java collections framework use as much sort as its default sorting algorithm.ß
